@@ -1,33 +1,32 @@
 {
   "name": "firebase-data-management",
-  "version": "1.0.0",
-  "description": "",
-  "main": "build/index.js",
+  "version": "1.0.05",
+  "description": "State management and firebase interface for React applications",
+  "author": "Russel Povey <russelglennpovey94@gmail.com>",
+  "main": "dist/index.js",
+  "files": [
+    "dist/*"
+  ],
   "repository": {
     "type": "git",
-    "url": "<git_repo_url>"
-  },
-  "peerDependencies": {
-    "react": "^16.9.0"
+    "url": "https://github.com/russelpovey/firebase-data-management"
   },
   "scripts": {
-    "start": "webpack --watch",
-    "build": "webpack"
+    "prepublishOnly": "babel ./src --out-dir ./dist -s inline"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+  "license": "MIT",
+  "dependencies": {},
+  "peerDependencies": {
     "react": "^16.9.0",
-    "webpack": "^4.39.3"
+    "firebase": "^6.4.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "webpack-cli": "^3.3.7"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "firebase": "^6.4.2",
+    "react": "^16.9.0"
   }
 }
