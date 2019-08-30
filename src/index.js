@@ -54,10 +54,8 @@ const DataStore = props => {
 
   const handleSnapshot = snapshot => {
     const collection = snapshot.query._query.path.segments[0];
-    const formatedDocs = snapshot.docs.map(formatDocSnap);
     const data = createCollectionStoreObj(snapshot.docs);
     dispatch(addCollection(collection, data));
-    // setState(p => ({ ...p, [collection]: formatedDocs }));
   };
 
   return (
